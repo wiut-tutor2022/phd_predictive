@@ -1,0 +1,190 @@
+@prefix : <http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM_ontology_part1_financial_indicators> .
+
+<http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM_ontology_part1_financial_indicators> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#directly_related_to
+:directly_related_to rdf:type owl:ObjectProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain :Accounts_Payable ,
+                                 :Accounts_Recieavable ,
+                                 :Capital_Employed ,
+                                 :Current_Assets ,
+                                 :Current_Liabilities ,
+                                 :Longterm_Liabilities ,
+                                 :Net_Assets ,
+                                 :Stock ,
+                                 <http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Shareholders'_Funds_(Equity)> .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#inversely_related_to
+:inversely_related_to rdf:type owl:ObjectProperty ,
+                               owl:InverseFunctionalProperty ;
+                      rdfs:domain :Accounts_Payable ,
+                                  :Accounts_Recieavable ,
+                                  :Capital_Employed ,
+                                  :Cost ,
+                                  :Current_Assets ,
+                                  :Current_Liabilities ,
+                                  :Gross_Profit ,
+                                  :Interest ,
+                                  :Longterm_Liabilities ,
+                                  :Net_Assets ,
+                                  :PAIT ,
+                                  :PBIT ,
+                                  :Sales ,
+                                  :Stock ,
+                                  <http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Shareholders'_Funds_(Equity)> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Normative_Value
+:Normative_Value rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Accounts_Payable
+:Accounts_Payable rdf:type owl:Class ;
+                  rdfs:subClassOf :Liabilities .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Accounts_Recieavable
+:Accounts_Recieavable rdf:type owl:Class ;
+                      rdfs:subClassOf :Assets .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Assets
+:Assets rdf:type owl:Class ;
+        rdfs:subClassOf :Balance_Sheet_Data .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Balance_Sheet_Data
+:Balance_Sheet_Data rdf:type owl:Class ;
+                    rdfs:subClassOf :Internal .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Capital_Employed
+:Capital_Employed rdf:type owl:Class ;
+                  rdfs:subClassOf :Assets .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Cash_Flow_Statement_Data
+:Cash_Flow_Statement_Data rdf:type owl:Class ;
+                          rdfs:subClassOf :Internal .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Cost
+:Cost rdf:type owl:Class ;
+      rdfs:subClassOf :Income_Statement_Data .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Current_Assets
+:Current_Assets rdf:type owl:Class ;
+                rdfs:subClassOf :Assets .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Current_Liabilities
+:Current_Liabilities rdf:type owl:Class ;
+                     rdfs:subClassOf :Liabilities .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#External
+:External rdf:type owl:Class ;
+          rdfs:subClassOf :Financial_Data .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#External_Audit_Files
+:External_Audit_Files rdf:type owl:Class ;
+                      rdfs:subClassOf :External .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Financial_Data
+:Financial_Data rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Gross_Profit
+:Gross_Profit rdf:type owl:Class ;
+              rdfs:subClassOf :Income_Statement_Data .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Income_Statement_Data
+:Income_Statement_Data rdf:type owl:Class ;
+                       rdfs:subClassOf :Internal .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Interest
+:Interest rdf:type owl:Class ;
+          rdfs:subClassOf :Income_Statement_Data .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Internal
+:Internal rdf:type owl:Class ;
+          rdfs:subClassOf :Financial_Data .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Liabilities
+:Liabilities rdf:type owl:Class ;
+             rdfs:subClassOf :Balance_Sheet_Data .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Longterm_Liabilities
+:Longterm_Liabilities rdf:type owl:Class ;
+                      rdfs:subClassOf :Liabilities .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Market_News
+:Market_News rdf:type owl:Class ;
+             rdfs:subClassOf :External .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Net_Assets
+:Net_Assets rdf:type owl:Class ;
+            rdfs:subClassOf :Assets .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#PAIT
+:PAIT rdf:type owl:Class ;
+      rdfs:subClassOf :Income_Statement_Data .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#PBIT
+:PBIT rdf:type owl:Class ;
+      rdfs:subClassOf :Income_Statement_Data .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Sales
+:Sales rdf:type owl:Class ;
+       rdfs:subClassOf :Income_Statement_Data .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Stock
+:Stock rdf:type owl:Class ;
+       rdfs:subClassOf :Assets .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Expert's_Opinion
+<http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Expert's_Opinion> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf :External .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Shareholders'_Funds_(Equity)
+<http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Shareholders'_Funds_(Equity)> rdf:type owl:Class ;
+                                                                                                    rdfs:subClassOf :Liabilities .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
