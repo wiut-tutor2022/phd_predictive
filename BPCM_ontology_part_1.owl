@@ -1,0 +1,124 @@
+@prefix : <http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM_ontology_part1_financial_indicators> .
+
+<http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM_ontology_part1_financial_indicators> rdf:type owl:Ontology .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Assets
+:Assets rdf:type owl:Class ;
+        rdfs:subClassOf :Balance_Sheet_Data .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Balance_Sheet_Data
+:Balance_Sheet_Data rdf:type owl:Class ;
+                    rdfs:subClassOf <http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Company's_Financial_Data> .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Cash_Flow_Statement_Data
+:Cash_Flow_Statement_Data rdf:type owl:Class ;
+                          rdfs:subClassOf <http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Company's_Financial_Data> .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Cost
+:Cost rdf:type owl:Class ;
+      rdfs:subClassOf :Income_Statement_Data .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Current_Assets
+:Current_Assets rdf:type owl:Class ;
+                rdfs:subClassOf :Assets .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Current_Liabilities
+:Current_Liabilities rdf:type owl:Class ;
+                     rdfs:subClassOf :Liabilities .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Gross_Profit
+:Gross_Profit rdf:type owl:Class ;
+              rdfs:subClassOf :Income_Statement_Data .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Income_Statement_Data
+:Income_Statement_Data rdf:type owl:Class ;
+                       rdfs:subClassOf <http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Company's_Financial_Data> .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Interest_Paid
+:Interest_Paid rdf:type owl:Class ;
+               rdfs:subClassOf :Income_Statement_Data .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Liabilities
+:Liabilities rdf:type owl:Class ;
+             rdfs:subClassOf :Balance_Sheet_Data .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Longterm_Liabilities
+:Longterm_Liabilities rdf:type owl:Class ;
+                      rdfs:subClassOf :Liabilities .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#PBIT
+:PBIT rdf:type owl:Class ;
+      rdfs:subClassOf :Income_Statement_Data .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Total_Assets
+:Total_Assets rdf:type owl:Class ;
+              rdfs:subClassOf :Assets .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Trade_Creditors
+:Trade_Creditors rdf:type owl:Class ;
+                 rdfs:subClassOf :Liabilities .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Trade_Debtors
+:Trade_Debtors rdf:type owl:Class ;
+               rdfs:subClassOf :Assets .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Turnover
+:Turnover rdf:type owl:Class ;
+          rdfs:subClassOf :Income_Statement_Data .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Company's_Financial_Data
+<http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Company's_Financial_Data> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Shareholders'_Funds
+<http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Shareholders'_Funds> rdf:type owl:Class ;
+                                                                                           rdfs:subClassOf :Liabilities .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Stock_&_W.I.P
+<http://www.semanticweb.org/nataliayerashenia/ontologies/2019/11/BPCM#Stock_&_W.I.P> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf :Assets .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2020/1/BPCM_ontology_part2_ratios#Operating_Cash_Flow
+<http://www.semanticweb.org/nataliayerashenia/ontologies/2020/1/BPCM_ontology_part2_ratios#Operating_Cash_Flow> rdf:type owl:Class ;
+                                                                                                                rdfs:subClassOf :Cash_Flow_Statement_Data .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2020/1/BPCM_ontology_part2_ratios#Total_Assets_Less_Current_Liabilities
+<http://www.semanticweb.org/nataliayerashenia/ontologies/2020/1/BPCM_ontology_part2_ratios#Total_Assets_Less_Current_Liabilities> rdf:type owl:Class ;
+                                                                                                                                  rdfs:subClassOf :Assets .
+
+
+###  http://www.semanticweb.org/nataliayerashenia/ontologies/2020/1/BPCM_ontology_part2_ratios#Short_Term_Loans_&_Overdrafts
+<http://www.semanticweb.org/nataliayerashenia/ontologies/2020/1/BPCM_ontology_part2_ratios#Short_Term_Loans_&_Overdrafts> rdf:type owl:Class ;
+                                                                                                                          rdfs:subClassOf :Liabilities .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
