@@ -7,7 +7,7 @@ The main focus of our research is advanced data pre-processing aimed at the more
 
 The project presents two use cases: the UK companies’ bankruptcy level detection (1) and FTSE100 index prediction (2).
 
-![GPCM](Generic_Model.jpg)
+![GPCM](Generic_Model.png)
 
 __The pipeline:__ Raw Financial Data is fed to the Graph Database which is additionally structured by the Financial Ontology and updated by the feedback loop from the Machine Learning Engine. The latter is used to update the weights of the nodes/relationships in the Graph DB. The Graph DB queries output Features that serve the basis for the machine learning-based prediction. The output of the latter is fed back to the Graph DB to update the weights.
 
