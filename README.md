@@ -33,7 +33,7 @@ __The pipeline:__ Raw Financial Data is fed to the Graph Database which is addit
 
 ## Files List – Use Case 2
 
-__!Note:__ The files will be added as soon as the next paper is published
+__!Note:__ The Python code files will be added as soon as the next paper is published
 
 * weights importance uc2.csv – CSV file with Random Forest Feature Importance Prediction Results.
 * combined output.csv – CSV file with combined output of LSTMs generated in main.py. 
