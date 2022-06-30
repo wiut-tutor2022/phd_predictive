@@ -1,5 +1,5 @@
-# Generic Predictive Computational Model (GPCM)
-The aim of the research to create a Generic Predictive Computational Model (GPCM) capable of automating analytical conclusions regarding the particular type of data, where information is presented reliably and objectively. This will significantly help to advance data analysis strategy by increasing the level of its consistency, reliability, and efficiency. A holistic approach will be applied, intended at achieving systematic, functional, technical, methodological and informational compatibility of the components of the analysis into a single whole.
+# Predictive Computational Model (PCM)
+The aim of the research to create a Generic Predictive Computational Model (PCM) capable of automating analytical conclusions regarding the particular type of data, where information is presented reliably and objectively. This will significantly help to advance data analysis strategy by increasing the level of its consistency, reliability, and efficiency. A holistic approach will be applied, intended at achieving systematic, functional, technical, methodological and informational compatibility of the components of the analysis into a single whole.
 
 The proposed system’s main feature is the consolidation of information management with the decision-making process to serve the prediction purpose. This involves the management of a vast amount of heterogeneous data based on semantic methods and graph-based methods (ontology, knowledge graphs, graph database) as well as advanced machine learning methods.
 
@@ -7,7 +7,7 @@ The main focus of our research is advanced data pre-processing aimed at the more
 
 The project presents two use cases: the UK companies’ bankruptcy level detection (1) and FTSE100 index prediction (2).
 
-![GPCM](Generic_Model.png)
+![PCM](Generic_Model.png)
 
 __The pipeline:__ Raw Financial Data is fed to the Graph Database which is additionally structured by the Financial Ontology and updated by the feedback loop from the Machine Learning Engine. The latter is used to update the weights of the nodes/relationships in the Graph DB. The Graph DB queries output Features that serve the basis for the machine learning-based prediction. The output of the latter is fed back to the Graph DB to update the weights.
 
