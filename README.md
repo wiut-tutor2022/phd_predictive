@@ -1,11 +1,11 @@
 # Predictive Computational Model (PCM)
-The aim of the research to create a Generic Predictive Computational Model (PCM) capable of automating analytical conclusions regarding the particular type of data, where information is presented reliably and objectively. This will significantly help to advance data analysis strategy by increasing the level of its consistency, reliability, and efficiency. A holistic approach will be applied, intended at achieving systematic, functional, technical, methodological and informational compatibility of the components of the analysis into a single whole.
+The aim of the research to create Generis Architecture for a Predictive Computational Model (PCM) capable of automating analytical conclusions regarding the particular type of data, where information is presented reliably and objectively. This model significantly helps to advance data analysis strategy by increasing the level of its consistency, reliability, and efficiency. A holistic approach is applied, intended at achieving systematic, functional, technical, methodological and informational compatibility of the components of the analysis into a single whole.
 
-The proposed system’s main feature is the consolidation of information management with the decision-making process to serve the prediction purpose. This involves the management of a vast amount of heterogeneous data based on semantic methods and graph-based methods (ontology, knowledge graphs, graph database) as well as advanced machine learning methods.
+The proposed model’s main feature is the consolidation of information management with the decision-making process to serve the prediction purpose. This involves the management of a vast amount of heterogeneous data based on semantic methods and graph-based methods (ontology, knowledge graphs, graph database) as well as advanced machine learning methods.
 
 The main focus of our research is advanced data pre-processing aimed at the more efficient feature selection.
 
-The project presents two use cases: the UK companies’ bankruptcy level detection (1) and FTSE100 index prediction (2).
+The reaserch presents two use cases: the UK companies’ bankruptcy level detection (1) and FTSE100 index prediction (2).
 
 ![PCM](Generic_Model_new2022.png)
 
