@@ -12,7 +12,7 @@ The reaserch presents two use cases: the UK companies’ bankruptcy level detect
 __The pipeline:__ Raw Financial Data is fed to the Graph Database which is additionally structured by the Financial Ontology and updated by the feedback loop from the Machine Learning Engine. The latter is used to update the weights of the nodes/relationships in the Graph DB. The Graph DB queries output Features that serve the basis for the machine learning-based prediction. The output of the latter is fed back to the Graph DB to update the weights.
 
 
-## Files List – Use Case 1 – Companys' Bunkruptcy Prediction (BPCM model)
+## Files List – Use Case 1 – Companys' Bunkruptcy Prediction (B-PCM model)
 
 * weights importance uc1.csv – CSV file with Random Forest Feature Importance Prediction Results.
 * BPCM NN v.2.0.py – Python Code of BPCM Neural Network.
@@ -31,7 +31,7 @@ __The pipeline:__ Raw Financial Data is fed to the Graph Database which is addit
 * Training Output 2019 43.csv – CSV File with Training Output Data for BPCM Neural Network.
 
 
-## Files List – Use Case 2 - Price Index Prediction (PIPCM model)
+## Files List – Use Case 2 - Market Index Prediction (MI-PCM model)
 
 * weights importance uc2.csv – CSV file with Random Forest Feature Importance Prediction Results.
 * combined output.csv – CSV file with combined output of LSTMs generated in main.py. 
