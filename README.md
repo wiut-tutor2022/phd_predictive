@@ -45,8 +45,8 @@ Selection.
 * import to neo4j uc2.py – Python Code: Importing the OPIP Ontology to Neo4j.
 * Input Data from Neo4j.csv – CSV File with Data imported from Neo4j.
 * input data import from neo4j.py – Python Code: Importing Input Data from Neo4j.
-* linear regression feature selection neo4j.py – Python Code of PIPCM Linear Regression with Feature Selection.
-* linear regression.py - Python Code of PIPCM Linear Redresion (without Feature Selection).
+* linear regression feature selection neo4j.py – Python Code of MIPCM Linear Regression with Feature Selection.
+* linear regression.py - Python Code of MIPCM Linear Redresion (without Feature Selection).
 * main_lstms_concatenation_unit.py – Python Code: Concatenation Unit.
 * Price Index Prediction v3.2.owl – OPIP Ontology RDF file (saved as OWL).
 * Processed Input Data FTSE100 1985 21.csv – CSV file with Input Date taken from external sources. 
