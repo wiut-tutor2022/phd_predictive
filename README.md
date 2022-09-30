@@ -12,10 +12,11 @@ The reaserch presents two use cases: the UK companies’ bankruptcy level detect
 __The pipeline:__ Raw Financial Data is fed to the Graph Database which is additionally structured by the Financial Ontology and updated by the feedback loop from the Machine Learning Engine. The latter is used to update the weights of the nodes/relationships in the Graph DB. The Graph DB queries output Features that serve the basis for the machine learning-based prediction. The output of the latter is fed back to the Graph DB to update the weights.
 
 
-## Files List – Use Case 1 – Companys' Bunkruptcy Prediction (B-PCM model)
+## Files List – Use Case 1 – Companys' Bunkruptcy Prediction (BPCM model)
 
 * weights importance uc1.csv – CSV file with Random Forest Feature Importance Prediction Results.
 * BPCM NN v.2.0.py – Python Code of BPCM Neural Network.
+* BPCM NN testing.py – The Python Code which was made for Neural Network evaluation purposes.
 * Company A Fin Indicators.csv – CSV file with Company A data taken from FAME database.
 * Company A Fin Ratios.csv – CSV file with Company A data taken from FAME database.
 * cypher queries uc1.py – Python Code of Feature Selection in Neo4j.
@@ -25,17 +26,23 @@ __The pipeline:__ Raw Financial Data is fed to the Graph Database which is addit
 * NN with neo4j feature selection.py – Python Code of BPCM Neural Network with Feature Selection.
 * OBP Ontology v.2.1.owl – OBP Ontology RDF file (saved as OWL).
 * Ratios Export.csv – CSV File with Input Data imported from Neo4j.
-* Training Data 2019 43.csv – CSV File with Training Data for BPCM Neural Network.
-* training data file after neo4j fs.py – Python Code for Training Data file after Feature Selection generation.
+* Training Data 2017 71.csv – CSV File with Training Data for BPCM Neural Network for 2017.
+* Training Data 2018 86.csv – CSV File with Training Data for BPCM Neural Network for 2018.
+* Training Data 2019 87.csv – CSV File with Training Data for BPCM Neural Network for 2019.
+* Training Data 2020 94.csv – CSV File with Training Data for BPCM Neural Network for 2020.
+* Training Data 2021 113.csv – CSV File with Training Data for BPCM Neural Network for 2021.
+* training data file after neo4j fs.py – Python Code for Training Data file after Feature Selection gener-
+ation.
 * Training Data with Neo4j Feature Selection.csv – CSV File with Training Data after Feature Selection for BPCM Neural Network.
-* Training Output 2019 43.csv – CSV File with Training Output Data for BPCM Neural Network.
+* Training Output 2019 87.csv – CSV File with Training Output Data for BPCM Neural Network.
 
 
-## Files List – Use Case 2 - Market Index Prediction (MI-PCM model)
+## Files List – Use Case 2 - Market Index Prediction (MIPCM model)
+
 
 * weights importance uc2.csv – CSV file with Random Forest Feature Importance Prediction Results.
-* combined output.csv – CSV file with combined output of LSTMs generated in main.py. 
-* cypher queries uc2.py – Python Code of Feature Selection in Neo4j.
+* combined output.csv – CSV file with combined output of LSTMs generated in main.py. cypher queries uc2.py
+– Python Code of Feature Selection in Neo4j.
 * feature importance uc2.py – Python Code of Random Forest Feature Importance Prediction.
 * feature selection from neo4j.csv – CSV File with Input Data after Feature Selection imported from Neo4j.
 * fill ontology in neo4j uc2.py – Python Code: Filling the Neo4j database with Data.
@@ -45,9 +52,9 @@ Selection.
 * import to neo4j uc2.py – Python Code: Importing the OPIP Ontology to Neo4j.
 * Input Data from Neo4j.csv – CSV File with Data imported from Neo4j.
 * input data import from neo4j.py – Python Code: Importing Input Data from Neo4j.
-* linear regression feature selection neo4j.py – Python Code of MIPCM Linear Regression with Feature Selection.
-* linear regression.py - Python Code of MIPCM Linear Redresion (without Feature Selection).
-* main_lstms_concatenation_unit.py – Python Code: Concatenation Unit.
+* linear regression feature selection neo4j.py – Python Code of PIPCM Linear Regression with Feature Selection.
+* linear regression.py - Python Code of PIPCM Linear Redresion (without Feature Selection).
+* main lstms concatenation unit.py – Python Code: Concatenation Unit.
 * Price Index Prediction v3.2.owl – OPIP Ontology RDF file (saved as OWL).
-* Processed Input Data FTSE100 1985 21.csv – CSV file with Input Date taken from external sources. 
-* lstm AWE.py, ..., lstm UR.py – Python Code with single LSTMs.
+* Processed Input Data FTSE100 1985 21.csv – CSV file with Input Date taken from external sources.
+* lstm AWE.py, ..., lstm UR.py – Python Code with single LSTMs for PIPCM.
