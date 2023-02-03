@@ -97,6 +97,7 @@ print("Chosen Profitability Ratio: ", cq.pr_node_name, pr_ratio)
 
 print("The Result: ")
 final_result = neural_network.think(np.array([ar_ratio, fs_ratio, lr_ratio, pr_ratio]))
+
 final_result = np.round_(final_result, decimals=3, out=None)
 print(final_result)
 
