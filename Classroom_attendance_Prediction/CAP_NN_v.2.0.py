@@ -6,7 +6,7 @@ import pandas as pd
 
 # Training Data
 # df = pd.read_csv('Training_Data_2021_113.csv')
-#df = pd.read_csv('2017_sem2_attendance_data3.csv')
+# df = pd.read_csv('2017_sem2_attendance_data3.csv')
 df = pd.read_csv('2017_sem2_attendance_data5.csv')
 
 df.fillna(0, inplace=True)
@@ -24,9 +24,10 @@ class NeuralNetwork():
         np.random.seed(1)
 
         # converting weights to a 14 by 1 matrix with values [-1;1) (we need [-1;1])
-        #self.synaptic_weights = 2 * np.random.random((14, 1)) - 1 #updated by Olga
-        #ValueError: shapes (2136,12) and (5,1) not aligned: 12 (dim 1) != 5 (dim 0)
-        self.synaptic_weights = 2 * np.random.random((12, 1)) - 1
+        # self.synaptic_weights = 2 * np.random.random((14, 1)) - 1 #updated by Olga
+        # ValueError: shapes (2136,12) and (5,1) not aligned: 12 (dim 1) != 5 (dim 0)
+        self.synaptic_weights = 2 * np.random.random((11, 1)) - 1
+
     def sigmoid(self, x):
         # the sigmoid function
         return 1 / (1 + np.exp(-x))
@@ -52,8 +53,8 @@ class NeuralNetwork():
     def think(self, inputs):
         # passing the inputs via the neuron to get output
         # converting values to floats
-
-        inputs = inputs.astype(int or str or datetime)
+        inputs = inputs.astype(int)
+        # inputs = inputs.astype(int or str or datetime)
         output = self.sigmoid(np.dot(inputs, self.synaptic_weights))
         return output
 
@@ -92,44 +93,44 @@ if __name__ == "__main__":
     # user_input_fourteen = str(input("SA1: "))
     # user_input_fourteen = str(input("SA2: "))
 
-    with open('Ratios_Export.csv') as csvfile:  # Testing Company Input Data
+    with open('Attributes_Export2.csv') as csvfile:  # Testing Company Input Data
         reader = csv.DictReader(csvfile)
         for row in reader:
             year = int(row['year'])
             semester = str(row['semester'])
             week = int(row['week'])
-           #date = date(row['date'])
+            # date = date(row['date'])
             day = str(row['day'])
             time_of_day = str(row['time_of_day'])
-         #   start_time = datetime(row['start_time'])  # time
-         #   end_time = datetime(row['end_time'])
+            #   start_time = datetime(row['start_time'])  # time
+            #   end_time = datetime(row['end_time'])
             room_name = str(row['room_name'])
             class_type = str(row['class_type'])
-         #   faculty = str(row['faculty'])
-         #   school = str(row['school'])
-            joint = int(row['joint'])
+            #   faculty = str(row['faculty'])
+            #   school = str(row['school'])
+            #joint = int(row['joint'])
             status = str(row['status'])
             degree = str(row['degree'])
             enrollment = int(row['enrollment'])
-         #   class_duration = datetime(row['class_duration'])  # time variable
+            #   class_duration = datetime(row['class_duration'])  # time variable
             attendance = int(row['attendance'])
 
 print("Attributes predicting attendance")
 
 print("Class type(lecture/laboratory/tutorial)*: ", class_type, )
-print("Course is combined or with other courses or not*", joint, )
-#print("Faculty*: ", faculty, )
+#print("Course is combined or with other courses or not*", joint, )
+# print("Faculty*: ", faculty, )
 print("Enrollment*", enrollment, )
-#print("School* ", school, )
+# print("School* ", school, )
 print("Degree* ", degree, )
 print("Status* (open or full) ", status, )
 print("Room name: ", room_name, )
-#print("Time of the day: ", time_of_day, )
-#print("Day", day, )
+# print("Time of the day: ", time_of_day, )
+# print("Day", day, )
 print("Year", year, )
-#print("Semester", semester, )
+# print("Semester", semester, )
 print("Week ", week, )
-#print("Date", date, )
+# print("Date", date, )
 print("Enrollment", enrollment)
 print("Attendance", attendance)
 
@@ -138,10 +139,14 @@ print("The Result: ")
 #                                               time_of_day, start_time, end_time, room_name, class_type, faculty, school, joint
 #                                               ])),
 
-final_result = neural_network.think(np.array([year, week, joint, enrollment, attendance
-                                              ])),
-#joint, status, degree, enrollment, class_duration, attendance
+final_result = neural_network.think(np.array(
+    [year, semester, week, day, time_of_day, room_name, class_type, status, degree, enrollment, attendance
+     ])),
+
+# ,year,semester,week,day,time_of_day,room_name,class_type,school,joint,status,degree,enrollment,attendance
+# joint, status, degree, enrollment, class_duration, attendance
 final_result = np.round(final_result, 5)
 print(final_result)
 
 print("[1.] - the high risk of bankruptcy, [0.] - the company X is stable ")
+#chose joint to remove and as a point to rotate around, need to ask Natalya why
